@@ -1,0 +1,44 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug extension",
+            "program": "godot_4_4_1",
+            "args": [
+                "--path",
+                "./demo",
+                "-e",
+            ],
+            "preLaunchTask": "generate project",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug extension on scene",
+            "program": "godot_4_4_1",
+            "args": [
+                "--upwards",
+                "${input:pickerInput}",
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "generate project"
+        },
+    ],
+    "inputs": [
+        {
+            "id": "pickerInput",
+            "type": "command",
+            "command": "filePicker.pick",
+            "args": {
+                "masks": "./demo/**/*.tscn",
+                "display": "filePath",
+                "output": "filePath"
+            }
+        }
+    ],
+}

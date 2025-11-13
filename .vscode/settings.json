@@ -1,0 +1,35 @@
+{
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.cpp": "${capture}.h,${capture}.os"
+    },
+    "files.associations": {
+        "*.rmd": "markdown",
+        "__split_buffer": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "iterator": "cpp",
+        "list": "cpp",
+        "memory": "cpp",
+        "valarray": "cpp",
+        "vector": "cpp",
+        "chrono": "cpp",
+        "format": "cpp",
+        "generator": "cpp",
+        "mutex": "cpp",
+        "numeric": "cpp",
+        "optional": "cpp",
+        "ranges": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "text_encoding": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "variant": "cpp",
+        "*.inc": "cpp",
+        "*.rh": "cpp"
+    }
+}
