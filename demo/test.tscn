@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://82iv13wwwngs"]
+
+[ext_resource type="Shader" uid="uid://br88r8fp06gcr" path="res://addons/qr_code_reader/camera.gdshader" id="1_37kl0"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_37kl0"]
+camera_feed_id = 1
+which_feed = 1
+camera_is_active = true
+
+[sub_resource type="CameraTexture" id="CameraTexture_8uh7m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6uqi0"]
+shader = ExtResource("1_37kl0")
+shader_parameter/camera_y = SubResource("CameraTexture_8uh7m")
+shader_parameter/camera_CbCr = SubResource("CameraTexture_37kl0")
+
+[sub_resource type="CameraTexture" id="CameraTexture_6uqi0"]
+camera_feed_id = 1
+which_feed = 1
+camera_is_active = true
+
+[sub_resource type="CameraTexture" id="CameraTexture_ppyta"]
+camera_feed_id = 1
+camera_is_active = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ykrsh"]
+shader = ExtResource("1_37kl0")
+shader_parameter/camera_y = SubResource("CameraTexture_ppyta")
+shader_parameter/camera_CbCr = SubResource("CameraTexture_6uqi0")
+
+[node name="TextureRect" type="AspectRatioContainer"]
+material = SubResource("ShaderMaterial_6uqi0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 2.688
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ykrsh")
+layout_mode = 2

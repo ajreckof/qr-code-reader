@@ -30,6 +30,7 @@
         "type_traits": "cpp",
         "variant": "cpp",
         "*.inc": "cpp",
-        "*.rh": "cpp"
+        "*.rh": "cpp",
+        "atomic": "cpp"
     }
 }

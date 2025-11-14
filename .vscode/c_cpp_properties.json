@@ -4,9 +4,9 @@
             "name": "Mac",
             "includePath": [
                 "${default}",
-                "/Users/tbonhoure/Godot/godot-cpp/gen/include",
-                "/Users/tbonhoure/Godot/godot-cpp/include",
-                "/Users/tbonhoure/Godot/godot-cpp/gdextension",
+                "${workspaceFolder}/godot-cpp/gen/include",
+                "${workspaceFolder}/godot-cpp/include",
+                "${workspaceFolder}/godot-cpp/gdextension",
                 "${workspaceFolder}/src/**"
             ],
             "defines": [],
